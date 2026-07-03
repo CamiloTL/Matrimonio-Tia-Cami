@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invitación de Boda Premium</title>
+<title>Invitación de Boda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
@@ -468,6 +468,8 @@ body{
 
     color:#777;
 
+    margin-left:8px;
+
 }
 
 .diasMes span{
@@ -576,17 +578,21 @@ transform:scale(1);
 
 #btnFecha{
 
-    left:17.5%;
+    left:16.5%;
 
-    top:27.5%;
+    top:27%;
 
-    width:18%;
+    width:20%;
 
-    height:8%;
+    height:9%;
 
     border-radius: 30%;
 
     -webkit-tap-highlight-color: transparent;
+
+    box-shadow:0px 0px 5px 2px rgba(220,161,93,.30);
+
+    animation:palpitar 2.8s infinite;
 
 }
 
@@ -594,17 +600,21 @@ transform:scale(1);
 
 #btnHora{
 
-    left:41.5%;
+    left:40.5%;
 
-    top:27.5%;
+    top:27%;
 
-    width:18%;
+    width:20%;
 
-    height:8%;
+    height:9%;
 
     border-radius: 30%;
 
     -webkit-tap-highlight-color: transparent;
+    
+    box-shadow:0px 0px 5px 2px rgba(220,161,93,.30);
+
+    animation:palpitar 2.8s infinite .4s;
 
 }
 
@@ -612,17 +622,21 @@ transform:scale(1);
 
 #btnLugar{
 
-    left:65.5%;
+    left:64.5%;
 
-    top:27.5%;
+    top:27%;
 
-    width:18%;
+    width:20%;
 
-    height:8%;
+    height:9%;
 
     border-radius: 30%;
 
     -webkit-tap-highlight-color: transparent;
+
+    box-shadow:0px 0px 5px 2px rgba(220,161,93,.30);
+
+    animation:palpitar 2.8s infinite .8s;
 
 }
 
@@ -640,8 +654,338 @@ transform:scale(1);
 
     -webkit-tap-highlight-color: transparent;
 
+
+
 }
 
+/*====================*/
+/* RELOJ */
+/*====================*/
+
+.horaModal{
+
+    text-align:center;
+
+}
+
+.horaModal h2{
+
+    color:#3f6d54;
+
+    margin-bottom:30px;
+
+}
+
+.reloj{
+
+    position:relative;
+
+    width:180px;
+
+    height:180px;
+
+    margin:auto;
+
+    border:8px solid #c6a55b;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+
+}
+
+/* Centro */
+
+.centro{
+
+    position:absolute;
+
+    width:14px;
+
+    height:14px;
+
+    background:#c6a55b;
+
+    border-radius:50%;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+/* Agujas */
+
+.aguja{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:50%;
+
+    transform-origin:bottom;
+
+    border-radius:10px;
+
+}
+
+.hora{
+
+    width:6px;
+
+    height:48px;
+
+    background:#3f6d54;
+
+    transform:translateX(-50%) rotate(150deg);
+
+}
+
+.minuto{
+
+    width:4px;
+
+    height:70px;
+
+    background:#c6a55b;
+
+    transform:translateX(-50%) rotate(0deg);
+
+}
+
+.horaModal h3{
+
+    margin-top:30px;
+
+    color:#3f6d54;
+
+    font-size:30px;
+
+}
+
+.horaModal p{
+
+    margin-top:12px;
+
+    color:#666;
+
+}
+
+.itinerario{
+
+    margin-top:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    text-align:center;
+}
+
+.evento{
+
+    font-family: "Aoboshi One", serif;
+
+    display:grid;
+
+    grid-template-columns:100px 20px 120px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:12px 18px;
+
+    background:#f8f8f8;
+
+    border-radius:14px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.20);
+
+}
+
+.separador{
+
+    font-family: "Aoboshi One", serif;
+
+    margin-left:50%;
+
+    text-align:center;
+
+    color:#c6a55b;
+
+    font-size:22px;
+
+    font-weight:300;
+
+}
+
+.descripcionEvento{
+
+    text-align:left;
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+.horaEvento{
+
+    font-family: "Aoboshi One", serif;
+
+    margin-right:20%;
+
+    text-align:right;
+
+    color:#3f6d54;
+
+    font-weight:bold;
+
+    font-size:17px;
+
+}
+
+.descripcionEvento{
+
+    margin-left:25%;
+
+    color:#666;
+
+    font-size:18px;
+
+    text-align:left;
+
+}
+
+/*==============================*/
+/* UBICACIÓN */
+/*==============================*/
+
+.lugarModal{
+
+    font-family: "Aoboshi One", serif;
+
+    text-align:center;
+
+}
+
+.lugarModal h2{
+
+    font-family: "Aoboshi One", serif;
+
+    margin:0;
+
+    color:#3f6d54;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.lugarModal h3{
+
+    font-family: "Aoboshi One", serif;
+
+    margin-top:10px;
+
+    margin-bottom:22px;
+
+    color:#777;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:1.4;
+
+}
+
+.lugarModal iframe{
+
+    width:100%;
+
+    height:280px;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+.btnMapa{
+
+    font-family: "Aoboshi One", serif;
+
+    display:block;
+
+    margin-top:24px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    background:#3f6d54;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btnMapa:hover{
+
+    transform:scale(1.03);
+
+    background:#2f5642;
+
+}
+
+/*========================================*/
+/* ANIMACIÓN BOTONES */
+/*========================================*/
+
+@keyframes palpitar{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    15%{
+
+        transform:scale(1.06);
+
+    }
+
+    30%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
 
 </style>
 </head>
@@ -895,6 +1239,94 @@ setTimeout(()=>{
 
 }
 
+function mostrarHora(){
+
+    abrirModal(`
+
+    <div class="horaModal">
+
+        <h2 style="font-family: 'Aoboshi One', serif;">Itinerario del Evento</h2>
+
+        <div class="reloj">
+
+            <div class="centro"></div>
+
+            <div class="aguja hora"></div>
+
+            <div class="aguja minuto"></div>
+
+        </div>
+
+        <div class="itinerario">
+
+            <div class="evento">
+
+    <span class="horaEvento">5:00 PM</span>
+
+    <span class="separador">|</span>
+
+    <span class="descripcionEvento">Ceremonia</span>
+
+</div>
+
+            <div class="evento">
+                <span class="horaEvento">6:00 PM</span>
+                <span class="separador">|</span>
+                <span class="descripcionEvento">Brindis</span>
+            </div>
+
+            <div class="evento">
+                <span class="horaEvento">7:00 PM</span>
+                <span class="separador">|</span>
+                <span class="descripcionEvento">Cena</span>
+            </div>
+
+            <div class="evento">
+                <span class="horaEvento">8:00 PM</span>
+                <span class="separador">|</span>
+                <span class="descripcionEvento">Pool Party</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    `);
+
+}
+
+function mostrarLugar(){
+
+    abrirModal(`
+
+        <div class="lugarModal">
+
+            <h2>Chinauta</h2>
+
+            <h3>40, Fusagasugá, Cundinamarca</h3>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127321.19480814629!2d-74.5276165!3d4.2615568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f1f8948b30f39%3A0xaa40dc77660b624c!2sHacienda%20el%20Ponke!5e0!3m2!1ses-419!2sco!4v1783049166836!5m2!1ses-419!2sco"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+            <a
+                class="btnMapa"
+                target="_blank"
+                href="https://maps.google.com/?q=Hacienda+el+Ponke+Chinauta">
+
+                Abrir en Google Maps
+
+            </a>
+
+        </div>
+
+    `);
+
+}
+
 function cerrarModal(){
 
     overlay.classList.remove("activo");
@@ -908,6 +1340,10 @@ document.getElementById("cerrarModal").onclick=cerrarModal;
 overlay.onclick=cerrarModal;
 
 document.getElementById("btnFecha").onclick = mostrarCalendario;
+
+document.getElementById("btnHora").onclick = mostrarHora;
+
+document.getElementById("btnLugar").onclick = mostrarLugar;
 
 </script>
 
